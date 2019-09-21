@@ -12,7 +12,8 @@ export class PlayRoomPage implements OnInit {
 
   monster: JSON;
   desc: String;
-  menu: String
+  menu: String;
+  dice: Number = 0;
 
   storie: String;
 
@@ -36,4 +37,22 @@ export class PlayRoomPage implements OnInit {
     }
     this.storie += desc + "\n";
   }
+  showRun() {
+    this.engine.setMenu("run");
+    this.menu = this.engine.getMenu();
+  }
+  showFight() {
+    this.engine.setMenu("fight");
+    this.menu = this.engine.getMenu();
+  }
+  useDice() {
+    this.dice = 0;
+    this.dice = Math.round(Math.random() * 6) + 1;
+    if (this.dice >= 5) {
+      this.desc += " and you run away";
+    } else {
+      this.desc += " oh....shit";
+    }
+  }
+
 }

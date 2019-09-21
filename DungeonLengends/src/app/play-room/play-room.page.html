@@ -7,19 +7,18 @@
 <ion-content>
   <p id="desc">{{desc}}</p>
   <div class="menu" *ngIf="menu=='normal'">
-    <button>Run</button>
-    <button>Fight</button>
+    <ion-button color="dark" (click)="showRun()">Run</ion-button>
+    <ion-button color="dark" (click)="showFight()">Fight</ion-button>
   </div>
   <div class="menu" *ngIf="menu=='fight'">
-    <button>Run</button>
-    <button>Fight</button>
+    <ion-button color="dark" (click)="useDice()">FIGHT</ion-button>
   </div>
   <div class="menu" *ngIf="menu=='run'">
-    <button>Run</button>
-    <button>Fight</button>
+    <p>{{dice}}</p>
+    <ion-button color="dark" (click)="useDice()">Dice</ion-button>
   </div>
   <div class="menu" *ngIf="menu=='equip'">
-    <button>Run</button>
-    <button>Fight</button>
+    <ion-button color="dark" (click)="showRun()">Run</ion-button>
+    <ion-button color="dark" (click)="showFight()">Run</ion-button>
   </div>
 </ion-content>
