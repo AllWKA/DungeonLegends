@@ -9,7 +9,7 @@ export class EngineService {
 
   constructor() { }
 
-  gameMode(mode: string) {
+  gameMode(mode: string): void {
     gameConfig.a = mode
     console.log(gameConfig.a);
   }
@@ -19,5 +19,8 @@ export class EngineService {
   }
   getMenu(): String {
     return gameConfig.menu;
+  }
+  setMenu(menu: string): void {
+    gameConfig.menu = menu;
   }
 }
