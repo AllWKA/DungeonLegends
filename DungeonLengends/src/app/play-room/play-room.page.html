@@ -5,5 +5,21 @@
 </ion-header>
 
 <ion-content>
-
+  <p id="desc">{{desc}}</p>
+  <div class="menu" *ngIf="menu=='normal'">
+    <button>Run</button>
+    <button>Fight</button>
+  </div>
+  <div class="menu" *ngIf="menu=='fight'">
+    <button>Run</button>
+    <button>Fight</button>
+  </div>
+  <div class="menu" *ngIf="menu=='run'">
+    <button>Run</button>
+    <button>Fight</button>
+  </div>
+  <div class="menu" *ngIf="menu=='equip'">
+    <button>Run</button>
+    <button>Fight</button>
+  </div>
 </ion-content>
