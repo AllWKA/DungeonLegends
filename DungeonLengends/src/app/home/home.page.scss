@@ -1,1 +1,17 @@
-
+.my-row{
+    display: flex;
+    justify-content: center;
+}
+.my-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 75vh;
+}
+ion-button{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+ion-title{
+    text-align: center;
+}
